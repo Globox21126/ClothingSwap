@@ -1,1 +1,18 @@
-@import "./Header.scss";
+@import "./Home/Header.scss";
+@import "./Home/Results.scss";
+
+.wrapper {
+    margin-right: auto;
+    margin-left:  auto;
+    max-width: 1758px;
+    padding-right: 45px;
+    padding-left:  45px;
+}
+
+.decoration {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../assets/assets/Decoration.svg");
+    height: 33px;
+    width: 253px;
+}
