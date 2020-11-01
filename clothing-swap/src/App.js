@@ -1,10 +1,11 @@
-import './App.scss';
+import Home from "./Components/Home/Home";
+import './Scss/main.scss';
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 
