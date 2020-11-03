@@ -11,31 +11,31 @@ function Steps() {
                 <summary>
                     <div className="steps__main__imgs"></div>
                     <h3>Wybierz rzeczy</h3>
-                    <span>-------</span>
+                    <span></span>
                     <p>ubrania, zabawki, sprzęt i inne</p>
                 </summary>
                 <summary>
                     <div className="steps__main__imgs"></div>
                     <h3>Spakuj je</h3>
-                    <span>-------</span>
+                    <span></span>
                     <p>skorzystaj z worków na śmieci</p>
                 </summary>
                 <summary>
                     <div className="steps__main__imgs"></div>
                     <h3>Zdecyduj komu chcesz pomóc</h3>
-                    <span>-------</span>
+                    <span></span>
                     <p>wybierz zaufane miejsce</p>
                 </summary>
                 <summary>
                     <div className="steps__main__imgs"></div>
                     <h3>Zamów kuriera</h3>
-                    <span>-------</span>
+                    <span></span>
                     <p>kurier przyjedzie w dogodnym terminie</p>
                 </summary>
             </section>
             <section className="steps__outro">
                 <div>
-                    <h1>Oddaj rzeczy</h1>
+                    <h1>Oddaj<span>rzeczy</span></h1>
                 </div>
             </section>
         </>

@@ -23,14 +23,53 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 0 10px;
+        margin: 0 40px;
+
+        h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        span {
+            width: 70px;
+            height: 1px;
+            background-color: #707070;
+            margin: 10.5px 0;
+        }
+
+        p {
+            font-size: 16px;
+        }
 
         .steps__main__imgs {
             height: 83px;
             width: 83px;
-            background-color: blue;
         }
 
+    }
+
+    summary:first-child {
+        div {
+            background-image: url("./../../assets/assets/Icon-1.svg");
+        }
+    }
+
+    summary:nth-child(2) {
+        div {
+            background-image: url("./../../assets/assets/Icon-2.svg");
+        }
+    }
+
+    summary:nth-child(3) {
+        div {
+            background-image: url("./../../assets/assets/Icon-3.svg");
+        }
+    }
+
+    summary:last-child {
+        div {
+            background-image: url("./../../assets/assets/Icon-4.svg");
+        }
     }
 
 }
@@ -51,6 +90,9 @@
 
         h1 {
             font-size: 36px;
+            span {
+                display: block;
+            }
         }
     }
 
