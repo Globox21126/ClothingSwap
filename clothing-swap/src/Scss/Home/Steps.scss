@@ -1,0 +1,57 @@
+.steps__intro {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 38px;
+        margin-bottom: 38px;
+    }
+}
+
+.steps__main {
+    height: 325px;
+    background-color: #F0F1F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    summary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 10px;
+
+        .steps__main__imgs {
+            height: 83px;
+            width: 83px;
+            background-color: blue;
+        }
+
+    }
+
+}
+
+.steps__outro {
+    height: 235px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 310px;
+        height: 120px;
+        border: 1px solid black;
+
+        h1 {
+            font-size: 36px;
+        }
+    }
+
+}
