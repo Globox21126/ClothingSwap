@@ -3,6 +3,7 @@ import Header from "./Header/Header";
 import Results from "./Results/Results";
 import Steps from "./Steps/Steps";
 import AboutUs from "./AboutUs/AboutUs";
+import Carousel from "./Carousel/Carousel"
 
 function Home() {
     return (
@@ -11,6 +12,7 @@ function Home() {
             <Results />
             <Steps />
             <AboutUs />
+            <Carousel />
         </>
     )
 }

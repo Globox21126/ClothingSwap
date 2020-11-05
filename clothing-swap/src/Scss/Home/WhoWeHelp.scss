@@ -1,0 +1,29 @@
+.who__we__help {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: 38px;
+
+    }
+
+    .who__we__help__carousel {
+        font-size: 24px;
+        display: flex;
+        justify-content: space-between;
+        div {
+            text-align: center;
+            margin-right: 107px;
+            span {
+                display: block;
+            }
+        }
+
+    }
+
+
+
+
+}
