@@ -3,27 +3,50 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 70px;
 
     h1 {
         font-size: 38px;
+        margin-bottom: 38px;
+    }
 
+    .decoration {
+        margin-bottom: 50px;
     }
 
     .who__we__help__carousel {
         font-size: 24px;
         display: flex;
         justify-content: space-between;
-        div {
+
+        .carousel__slide {
             text-align: center;
-            margin-right: 107px;
+            max-width: 148px;
+            margin-right: 105px;
+            margin-bottom: 70px;
+            padding: 23px 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            &:active {
+                border: 1px solid gray;
+            }
+
             span {
                 display: block;
             }
         }
 
+        div:last-child {
+            margin-right: 0;
+        }
     }
 
-
-
-
+    p {
+        max-width: 640px;
+        font-size: 22px;
+        text-align: center;
+    }
 }
