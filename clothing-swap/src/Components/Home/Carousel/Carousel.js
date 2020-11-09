@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
 function Carousel() {
- 
+
     const [description, setDescription] = useState(0);
     const [data, setData] = useState("");
 
@@ -10,6 +10,8 @@ function Carousel() {
         .then(resp => resp.json())
         .then(collection => setData(collection))
     }
+
+    //json-server --watch db.json
 
     const carousel0 = () => {
         setDescription(prev => 0)
@@ -87,7 +89,6 @@ function Carousel() {
                 )}
             </section>
         </>
-
     )
 }
 
