@@ -1,62 +1,35 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 function Carousel() {
+ 
+    const [description, setDescription] = useState(0);
+    const [data, setData] = useState("");
 
-    const carousel1 = {
-        description: "lorem ipsum",
-        collection: [
-        {name: "moja fundacja", desc: "fajna fundacja", p: "co oddac"},
-        {name: "moja fundacja2", desc: "fajna fundacja", p: "co oddac"},
-        {name: "moja fundacja3", desc: "fajna fundacja", p: "co oddac"}]
-        }
-
-    const carousel1 = {
-        line1__header: `Fundacja “Dbam o Zdrowie”`,
-        line1__p: `Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.`,
-        line1__right: `ubrania, jedzenie, sprzęt AGD, meble, zabawki`,
-
-        line2__header: `Fundacja “Dla dzieci”`,
-        line2__p: `Cel i misja: Pomoc dzieciom z ubogich rodzin.`,
-        line2__right: `ubrania, meble, zabawki`,
-
-        line3__header: `Fundacja “Bez domu”`,
-        line3__p: `Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.`,
-        line__right: `ubrania, jedzenie, ciepłe koce`
+    const fetchAllCarousel = () => {
+        fetch("http://localhost:3000/collection")
+        .then(resp => resp.json())
+        .then(collection => setData(collection))
     }
 
-    const carousel2 = {
-        line1__header: `Organizacja “Lorem Ipsum 1”`,
-        line1__p: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
-        line1__right: `Egestas, sed, tempus`,
-
-        line2__header: `Organizacja “Lorem Ipsum 2”`,
-        line2__p: `Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.`,
-        line2__right: `Ut, aliquam, purus, sit, amet`,
-
-        line3__header: `Organizacja “Lorem Ipsum 3”`,
-        line3__p: `Scelerisque in dictum non consectetur a erat nam.`,
-        line__right: `Mi, quis, hendrerit, dolor`
+    const carousel0 = () => {
+        setDescription(prev => 0)
+    }
+    const carousel1 = () => {
+        setDescription(prev => 1)
+    }
+    const carousel2 = () => {
+        setDescription(prev => 2)
     }
 
-    const carousel3 = {
-        line1__header: `Zbiórka “Lorem Ipsum 1”`,
-        line1__p: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
-        line1__right: `Egestas, sed, tempus`,
+    const list = [data[description]];
 
-        line2__header: `Zbiórka “Lorem Ipsum 2”`,
-        line2__p: `Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.`,
-        line2__right: `Ut, aliquam, purus, sit, amet`,
+    useEffect(() => {
+        fetchAllCarousel();
+    }, []);
 
-        line3__header: `Zbiórka “Lorem Ipsum 3”`,
-        line3__p: `Scelerisque in dictum non consectetur a erat nam.`,
-        line__right: `Mi, quis, hendrerit, dolor`
+    if(!data) {
+        return <h1>Loading...</h1>
     }
-
-    const carousel = [carousel1, carousel2]
-
-
-
-
 
     return (
         <>
@@ -64,38 +37,54 @@ function Carousel() {
                 <h1>Komu pomagamy?</h1>
                 <span className="decoration"></span>
                 <div className="who__we__help__carousel">
-                    <div className="carousel__slide">Fundacjom</div>
-                    <div className="carousel__slide">
+                    <div onClick={carousel0} className="carousel__slide">Fundacjom</div>
+                    <div onClick={carousel1} className="carousel__slide">
                         <span>
                         Organizacjom 
                         </span>
                         pozarządowym
                     </div>
-                    <div className="carousel__slide">
+                    <div onClick={carousel2} className="carousel__slide">
                         <span>
                         Lokalnym
                         </span>
                         zbiórkom
                     </div>
                 </div>
-                <p>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+                {list.map((el) => <p key={el.id}>{el.description}</p>)}
             </section>
-            <section className="who__we__help__details">
-                <ul>
-                    <li>{carousel1.line1__header}</li>
-                    <li>{carousel1.line1__p}</li>
-                    <li>{carousel1.line1__right}</li>
-                </ul>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+            <section className="who__we__help__details wrapper">
+                {list.map((el) => 
+                    <div className="list" key={el.id}>
+                        <div className="list__details">
+                            <div>
+                                <h2 className="list__left">{el.name}</h2>
+                                <p>{el.desc}</p>
+                            </div>
+                            <div className="list__right">
+                                <p>{el.p}</p>
+                            </div>
+                        </div>
+                        <div className="list__details">
+                            <div>
+                                <h2 className="list__left">{el.name2}</h2>
+                                <p>{el.desc2}</p>
+                            </div>
+                            <div className="list__right">
+                                <p>{el.p2}</p>
+                            </div>
+                        </div>
+                        <div className="list__details">
+                            <div>
+                                <h2 className="list__left">{el.name3}</h2>
+                                <p>{el.desc3}</p>
+                            </div>
+                            <div className="list__right">
+                                <p>{el.p3}</p>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </section>
         </>
 
