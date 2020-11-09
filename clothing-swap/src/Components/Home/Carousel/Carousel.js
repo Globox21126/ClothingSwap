@@ -5,10 +5,16 @@ function Carousel() {
     const [description, setDescription] = useState(0);
     const [data, setData] = useState("");
 
+    // const fetchAllCarousel = () => {
+    //     fetch("http://localhost:3000/collection")
+    //     .then(resp => resp.json())
+    //     .then(collection => setData(collection))
+    // }
+
     const fetchAllCarousel = () => {
-        fetch("http://localhost:3000/collection")
+        fetch("http://localhost:3000/carousel")
         .then(resp => resp.json())
-        .then(collection => setData(collection))
+        .then(carousel => setData(carousel))
     }
 
     //json-server --watch db.json
@@ -56,37 +62,37 @@ function Carousel() {
                 {list.map((el) => <p key={el.id}>{el.description}</p>)}
             </section>
             <section className="who__we__help__details wrapper">
-                {list.map((el) => 
+                {/* {list.map((el) => 
                     <div className="list" key={el.id}>
                         <div className="list__details">
                             <div>
-                                <h2 className="list__left">{el.name}</h2>
-                                <p>{el.desc}</p>
+                                <h2 className="list__left">{el.collection[description].name}</h2>
+                                <p>{el.collection[description].desc}</p>
                             </div>
                             <div className="list__right">
-                                <p>{el.p}</p>
+                                <p>{el.collection[description].p}</p>
                             </div>
                         </div>
                         <div className="list__details">
                             <div>
-                                <h2 className="list__left">{el.name2}</h2>
-                                <p>{el.desc2}</p>
+                                <h2 className="list__left">{el.collection[description].name2}</h2>
+                                <p>{el.collection[description].desc2}</p>
                             </div>
                             <div className="list__right">
-                                <p>{el.p2}</p>
+                                <p>{el.collection[description].p2}</p>
                             </div>
                         </div>
                         <div className="list__details">
                             <div>
-                                <h2 className="list__left">{el.name3}</h2>
-                                <p>{el.desc3}</p>
+                                <h2 className="list__left">{el.collection[description].name3}</h2>
+                                <p>{el.collection[description].desc3}</p>
                             </div>
                             <div className="list__right">
-                                <p>{el.p3}</p>
+                                <p>{el.collection[description].p3}</p>
                             </div>
                         </div>
                     </div>
-                )}
+                )} */}
             </section>
         </>
     )

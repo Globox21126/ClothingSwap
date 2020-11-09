@@ -4,6 +4,8 @@
     justify-content: space-around;
     background-image: url("../../assets/assets/3-Columns-Background/3\ Columns\ Background@2x.png");
     background-size: cover;
+    font-family: $font__OpenSans;
+    color: $color__dark__gray;
 
     div {
         text-align: center;
@@ -22,6 +24,11 @@
         h3 {
             font-size: 18px;
             margin-bottom: 28px;
+        }
+
+        p {
+            font-family: $font__Merriweather;
+            font-size: 15px;
         }
 
     }
