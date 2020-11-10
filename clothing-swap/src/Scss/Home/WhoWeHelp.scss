@@ -3,27 +3,118 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 70px;
+    font-family: $font__OpenSans;
+    color: $color__dark__gray;
 
     h1 {
         font-size: 38px;
+        margin-bottom: 38px;
+    }
 
+    .decoration {
+        margin-bottom: 50px;
     }
 
     .who__we__help__carousel {
         font-size: 24px;
         display: flex;
         justify-content: space-between;
-        div {
+
+        .carousel__slide {
             text-align: center;
-            margin-right: 107px;
+            max-width: 148px;
+            margin-right: 105px;
+            margin-bottom: 70px;
+            padding: 23px 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-sizing: border-box;
+
+
+            &:focus {
+                border: 1px solid gray;
+                box-sizing: border-box;
+            }
+            &:active {
+                border: 1px solid gray;
+                box-sizing: border-box;
+            }
+
             span {
                 display: block;
             }
         }
 
+        div:last-child {
+            margin-right: 0;
+        }
     }
 
+    p {
+        max-width: 640px;
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 66px;
+    }
+}
 
+.who__we__help__details {
+    margin-bottom: 80px;
+    font-family: $font__Merriweather;
+    color: $color__dark__gray;
 
+    .list {
+        max-width: 1340px;
 
+        .list__details {
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid $color__light__gray;
+            justify-content: space-between;
+            padding-top: 34px;
+            padding-bottom: 31px;
+
+            div {
+
+                .list__left {
+                    font-size: 26px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        div:nth-child(3) {
+            border: none;
+        }
+
+        .list__pagination {
+            margin: 0 auto;
+            max-width: 250px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            .pagination__box {
+                width: 40px;
+                height: 50px;
+                margin-right: 25px;
+                border: none;
+                background-color: white;
+
+                &:active {
+                    outline: 1px solid $color__light__gray;
+                }
+                &:focus {
+                    outline: 1px solid $color__light__gray;
+                }
+            }
+        }
+        
+    }
 }

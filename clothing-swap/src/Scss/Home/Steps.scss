@@ -4,6 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: $font__OpenSans;
+    color: $color__dark__gray;
 
     h1 {
         font-size: 38px;
@@ -13,10 +15,12 @@
 
 .steps__main {
     height: 325px;
-    background-color: #F0F1F1;
+    background-color: $color__white;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: $font__OpenSans;
+    color: $color__dark__gray;
 
     summary {
         display: flex;
@@ -28,17 +32,19 @@
         h3 {
             font-size: 18px;
             margin-top: 10px;
+            text-align: center;
         }
 
         span {
             width: 70px;
             height: 1px;
-            background-color: #707070;
+            background-color: $color__light__gray;
             margin: 10.5px 0;
         }
 
         p {
             font-size: 16px;
+            text-align: center;
         }
 
         .steps__main__imgs {
@@ -79,6 +85,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: $font__OpenSans;
+    color: $color__dark__gray;
 
     div {
         display: flex;
@@ -86,7 +94,7 @@
         align-items: center;
         width: 310px;
         height: 120px;
-        border: 1px solid black;
+        border: 1px solid $color__light__gray;
 
         h1 {
             font-size: 36px;
