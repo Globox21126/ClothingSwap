@@ -4,7 +4,7 @@ function ContactUs() {
     return (
         <section className="contact__us__form">
             <form className="wrapper">
-                <h1></h1>
+                <h1>j</h1>
                 <span className="decoration"></span>
                 <div>
                     <label>First name:</label>

@@ -4,6 +4,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    font-family: $font__OpenSans;
+    color: $color__dark__gray;
 
     .about__us__details {
         display: flex;
@@ -12,7 +14,7 @@
         flex-direction: column;
         height: 100%;
         width: 50%;
-        background-color: #F0F1F1;
+        background-color: $color__white;
 
         h3 {
             font-size: 38px;
@@ -24,10 +26,11 @@
         }
 
         div {
-            font-size: 30px;
+            font-size: 28px;
             max-width: 550px;
             height: 200px;
             text-align: center;
+            letter-spacing: -0.6px;
 
 
             p {

@@ -10,7 +10,6 @@ function AboutUs() {
                     Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.
                     <p></p>
                 </div>
-
             </summary>
             <div className="about__us__photo" />
         </section>
