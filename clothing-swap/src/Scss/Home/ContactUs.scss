@@ -1,0 +1,64 @@
+.contact__us__form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    height: 1026px;
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            margin: 0 auto;
+        }
+        
+        .form__inputs {
+            display: flex;
+
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .form__message {
+            align-self: flex-start;
+            width: 100%;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            align-self: flex-end;
+        }
+    }
+
+    .form__background {
+        width: 63%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: relative;
+
+        &::before {
+            content: "";
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            opacity: 0.2;
+            background-image: url("../../assets/assets/Background-Contact-Form.jpg");
+        }
+
+        h3 {
+            position: relative;
+            color: black;
+        }
+    }
+}

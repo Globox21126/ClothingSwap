@@ -26,21 +26,30 @@
             max-width: 148px;
             margin-right: 105px;
             margin-bottom: 70px;
-            padding: 23px 42px;
+            padding: 30px 100px;
+            font-size: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            box-sizing: border-box;
+            border: none;
+            background-color: white;
+            cursor: pointer;
+            font-family: $font__OpenSans;
+            color: $color__dark__gray;
 
 
             &:focus {
-                border: 1px solid gray;
-                box-sizing: border-box;
+                border: 1px solid $color__light__gray;
+                scale: 1;
             }
             &:active {
-                border: 1px solid gray;
-                box-sizing: border-box;
+                border: 1px solid $color__light__gray;
+                scale: 1;
+            }
+
+            &:last-child {
+                margin-right: 0;
             }
 
             span {
@@ -106,6 +115,9 @@
                 margin-right: 25px;
                 border: none;
                 background-color: white;
+                cursor: pointer;
+                font-family: $font__Merriweather;
+                color: $color__dark__gray;
 
                 &:active {
                     outline: 1px solid $color__light__gray;

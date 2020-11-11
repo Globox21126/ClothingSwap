@@ -52,24 +52,24 @@ function Carousel() {
                 <h1>Komu pomagamy?</h1>
                 <span className="decoration"></span>
                 <div className="who__we__help__carousel">
-                    <div onClick={carousel0} id={0} className="carousel__slide">Fundacjom</div>
-                    <div onClick={carousel1} id={1} className="carousel__slide">
+                    <button onClick={carousel0} id={0} className="carousel__slide">Fundacjom</button>
+                    <button onClick={carousel1} id={1} className="carousel__slide">
                         <span>
                         Organizacjom 
                         </span>
                         pozarządowym
-                    </div>
-                    <div onClick={carousel2} id={2} className="carousel__slide">
+                    </button>
+                    <button onClick={carousel2} id={2} className="carousel__slide">
                         <span>
                         Lokalnym
                         </span>
                         zbiórkom
-                    </div>
+                    </button>
                 </div>
                 <p>{data[description].description}</p>
             </section>
-            <section className="who__we__help__details wrapper">
-                    <div className="list">
+            <section className="who__we__help__details">
+                    <div className="list wrapper">
                         <div className="list__details">
                             <div>
                                 <h2 className="list__left">{data[description].collection[pagination].name}</h2>
@@ -98,11 +98,12 @@ function Carousel() {
                             </div>
                         </div>
                         <div className="list__pagination">
-                            {data[description].collection.map( el => 
-                                <button onClick={(e) => handlePagination(e)} className="pagination__box" id={el.id - 1} key={el.id}>
-                                    {el.id}
-                                </button>
-                            )}
+                            {data[description].collection.length > 1 ? 
+                                data[description].collection.map( el => 
+                                    <button onClick={(e) => handlePagination(e)} className="pagination__box" id={el.id - 1} key={el.id}>
+                                        {el.id}
+                                    </button>
+                                ) : <div style={{height: "50px"}}></div>}
                         </div>
                     </div>                
             </section>
@@ -111,3 +112,9 @@ function Carousel() {
 }
 
 export default Carousel
+
+// {data[description].collection.map( el => 
+//     <button onClick={(e) => handlePagination(e)} className="pagination__box" id={el.id - 1} key={el.id}>
+//         {el.id}
+//     </button>
+// )}
