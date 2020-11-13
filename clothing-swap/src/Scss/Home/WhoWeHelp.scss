@@ -42,10 +42,12 @@
             &:focus {
                 border: 1px solid $color__light__gray;
                 scale: 1;
+                outline: none;
             }
             &:active {
                 border: 1px solid $color__light__gray;
                 scale: 1;
+                outline: none;
             }
 
             &:last-child {

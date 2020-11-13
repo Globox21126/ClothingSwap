@@ -6,12 +6,6 @@ function Carousel() {
     const [pagination, setPagination] = useState(0);
     const [data, setData] = useState();
 
-    // const fetchAllCarousel = () => {
-    //     fetch("http://localhost:3000/collection")
-    //     .then(resp => resp.json())
-    //     .then(collection => setData(collection))
-    // }
-
     const fetchAllCarousel = () => {
         fetch("http://localhost:3000/carousel")
         .then(resp => resp.json())
