@@ -1,8 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Nav from "../Home/Header/Header__components/Nav";
 import {Link as RouterPath} from "react-router-dom";
 
-function Login() {
+
+function Register() {
+
+    const [userEmail, setUserEmail] = useState("");
+    const [userPassword, setUserPassword] = useState("");
+    const [validatePassword, setValidatePassword] = useState("");
+
+
     return (
         <section className="header wrapper login">
             <Nav />
@@ -12,19 +19,23 @@ function Login() {
                 <div className="login__box">
                     <div>
                         <label>Email</label>
-                        <input />
+                        <input onChange={(e) => {setUserEmail(e.target.value);}} />
                     </div>
                     <div>
                         <label>Hasło</label>
-                        <input type="password" />
+                        <input onChange={(e) => {setUserPassword(e.target.value);}} type="password" />
+                    </div>
+                    <div>
+                        <label>Powtórz hasło</label>
+                        <input onChange={(e) => {setValidatePassword(e.target.value);}} type="password" />
                     </div>
                 </div>
                 <div>
                     <RouterPath to="/Register">
-                        <button>Załóż konto</button>
+                        <button>Zaloguj się</button>
                     </RouterPath>
                     <RouterPath to="/Home">
-                        <button>Zaloguj się</button>
+                        <button>Załóż konto</button>
                     </RouterPath>
                 </div>
             </section>
@@ -32,4 +43,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Register
