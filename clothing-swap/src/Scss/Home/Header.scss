@@ -20,7 +20,7 @@
                 flex-direction: row;
 
                 button {
-                    margin: 10px 15px;
+                    margin: 10px;
                     cursor: pointer;
                     background: none;
                     border: none;
@@ -29,6 +29,8 @@
                     color: $color__dark__gray;
                     font-size: 14px;
                     padding: 9px 20px;
+                    display: flex;
+                    text-decoration: none;
 
                     &:hover {
                         outline: 1px solid $color__light__gray;
@@ -37,6 +39,21 @@
 
                     a {
                         font-size: 18px;
+                        padding: 15px;
+
+                    }
+                }
+
+                .routing {
+                    text-decoration: inherit;
+
+                    &:hover {
+                        outline: 1px solid $color__yellow;
+                        scale: 1;
+                    }
+
+                    a {
+                        text-decoration: none;
                     }
                 }
             }

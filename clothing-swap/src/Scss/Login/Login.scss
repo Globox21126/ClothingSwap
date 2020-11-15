@@ -1,0 +1,25 @@
+.login {
+    display: flex;
+    flex-direction: column;
+
+    .login__form {
+        display: flex;
+        align-items: center;
+
+        .login__box {
+            width: 384px;
+            height: 235px;
+            background-color: $color__white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                max-width: 250px;
+            }
+        }
+    }
+}
