@@ -18,8 +18,26 @@
             ul {
                 display: flex;
                 flex-direction: row;
-                li {
+
+                button {
                     margin: 10px 15px;
+                    cursor: pointer;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    font-family: $font__OpenSans;
+                    color: $color__dark__gray;
+                    font-size: 14px;
+                    padding: 9px 20px;
+
+                    &:hover {
+                        outline: 1px solid $color__light__gray;
+                        scale: 1;
+                    }
+
+                    a {
+                        font-size: 18px;
+                    }
                 }
             }
         }

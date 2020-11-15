@@ -3,11 +3,11 @@ import React from 'react'
 function Steps() {
     return (
         <>
-            <section className="wrapper steps__intro">
+            <section id="steps" className="wrapper steps__intro">
                 <h1>Wystarczą 4 proste kroki</h1>
                 <div className="decoration"></div>
             </section>
-            <section className="wrapper steps__main">
+            <section className="steps__main">
                 <summary>
                     <div className="steps__main__imgs"></div>
                     <h3>Wybierz rzeczy</h3>

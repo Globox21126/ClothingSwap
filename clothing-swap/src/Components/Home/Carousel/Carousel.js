@@ -42,7 +42,7 @@ function Carousel() {
 
     return (
         <>
-            <section className="who__we__help">
+            <section id="fundations" className="who__we__help">
                 <h1>Komu pomagamy?</h1>
                 <span className="decoration"></span>
                 <div className="who__we__help__carousel">
