@@ -45,7 +45,7 @@ function ContactUs() {
     }
 
     return (
-        <section className="contact__us__form">
+        <section id="contact" className="contact__us__form">
             <form onSubmit={handleForm} className="form wrapper">
                 <h1>Skontaktuj się z nami</h1>
                 <div className="decoration"></div>
