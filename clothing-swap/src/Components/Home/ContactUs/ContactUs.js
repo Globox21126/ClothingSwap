@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import database from "../../../config";
 
 function ContactUs() {
 
@@ -17,15 +18,15 @@ function ContactUs() {
         changeMessage(e.target.value);
     }
 
-    const addMessage = (formMessage) => {
-        fetch("http://localhost:3000/form__send", {
-            method: "POST",
-            body: JSON.stringify(formMessage),
-            headers: {
-                "Content-type" : "application/json"
-            }
-        })
-    }
+    // const addMessage = (formMessage) => {
+    //     fetch("http://localhost:3000/form__send", {
+    //         method: "POST",
+    //         body: JSON.stringify(formMessage),
+    //         headers: {
+    //             "Content-type" : "application/json"
+    //         }
+    //     })
+    // }
 
     const handleForm = (e) => {
 
@@ -37,7 +38,8 @@ function ContactUs() {
             userMessage: message,
         }
 
-        addMessage(formMessage);
+        // addMessage(formMessage);
+        database.ref("/messages").push(formMessage);
 
         changeName("");
         changeEmail("");

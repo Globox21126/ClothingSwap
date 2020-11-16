@@ -9,6 +9,12 @@ function Register() {
     const [userPassword, setUserPassword] = useState("");
     const [validatePassword, setValidatePassword] = useState("");
 
+    const handleNewuser = (user) => {
+
+
+        
+    }
+
 
     return (
         <section className="header wrapper login">

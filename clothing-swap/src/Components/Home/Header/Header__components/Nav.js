@@ -59,7 +59,7 @@ function Nav() {
                             spy={true}
                             smooth={true}
                             hashSpy={true}
-                            offset={-70}
+                            offset={-68}
                             duration={500}
                             delay={200}>
                             Fundacja i organizacje
