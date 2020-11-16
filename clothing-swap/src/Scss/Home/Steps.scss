@@ -92,14 +92,39 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 310px;
-        height: 120px;
-        border: 1px solid $color__light__gray;
 
-        h1 {
-            font-size: 36px;
+        button {
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+            border: 1px solid $color__light__gray;
+            width: 310px;
+            height: 120px;
+            outline: none;
+            background: none;
+            font-family: $font__OpenSans;
+            color: $color__dark__gray;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:active {
+                outline: none;
+            }
+
+            &:first-child {
+                margin-right: 44px;
+            }
+
             span {
-                display: block;
+                font-size: 36px;
             }
         }
     }

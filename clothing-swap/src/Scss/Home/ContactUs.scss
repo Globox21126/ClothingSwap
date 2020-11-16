@@ -25,6 +25,7 @@
             justify-content: space-between;
             width: 100%;
             height: 62px;
+            margin-bottom: 40px;
 
             div {
                 display: flex;
@@ -33,11 +34,13 @@
 
                 label {
                     font-size: 16px;
+                    font-weight: bold;
                 }
 
                 input {
                     border: none;
                     border-bottom: 1px solid $color__light__gray;
+
 
                     &:focus {
                         border: none;
@@ -56,6 +59,7 @@
 
         .form__message {
             align-self: flex-start;
+            font-weight: bold;
         }
 
         .form__message__input {
@@ -63,6 +67,8 @@
             border: none;
             border-bottom: 1px solid $color__light__gray;
             width: 100%;
+            height: 97px;
+            margin-bottom: 44px;
 
             &:focus {
                 border: none;

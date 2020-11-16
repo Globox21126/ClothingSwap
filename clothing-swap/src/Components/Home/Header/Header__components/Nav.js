@@ -3,12 +3,15 @@ import {Link} from 'react-scroll'
 import {Link as RouterPath} from "react-router-dom";
 
 
-function Nav() {
+function Nav(props) {
+
+    const {user} = props;
 
     return (
         <section>
             <nav className="header__nav">
                 <ul className="header__login">
+    
                     <RouterPath to="/Login">
                         <button className="routing">Zaloguj</button>
                     </RouterPath>
