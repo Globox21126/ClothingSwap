@@ -77,26 +77,26 @@ function Register() {
         <section className="header wrapper login">
             <Nav />
             <section className="login__form">
-                <h1>Zaloguj się</h1>
-                <div className="decoration"></div>
+                <h1>Zarejestruj się</h1>
+                <div className="decoration form__deco"></div>
                 <div className="login__box">
                     <div>
                         <label>Email</label>
-                        <input onChange={(e) => {setUserEmail(e.target.value);}} />
+                        <input className="login__input" onChange={(e) => {setUserEmail(e.target.value);}} />
                     </div>
                     <p>{emailError}</p>
                     <div>
                         <label>Hasło</label>
-                        <input onChange={(e) => {setUserPassword(e.target.value);}} type="password" />
+                        <input className="login__input" onChange={(e) => {setUserPassword(e.target.value);}} type="password" />
                     </div>
                     <p>{passwordError}</p>
                     <div>
                         <label>Powtórz hasło</label>
-                        <input onChange={(e) => {setValidatePassword(e.target.value);}} type="password" />
+                        <input className="login__input" onChange={(e) => {setValidatePassword(e.target.value);}} type="password" />
                     </div>
                     <p>{passwordErrorParaf}</p>
                 </div>
-                <div>
+                <div className="login__buttons">
                     <RouterPath to="/Login">
                         <button>Zaloguj się</button>
                     </RouterPath>

@@ -59,20 +59,20 @@ function Login() {
             <Nav user={hasAccount} />
             <section className="login__form">
                 <h1>Zaloguj się</h1>
-                <div className="decoration"></div>
+                <div className="decoration form__deco"></div>
                 <div className="login__box">
                     <div>
                         <label>Email</label>
-                        <input onChange={(e) => {setUserEmail(e.target.value);}} />
-                        <p>s{emailError}</p>
+                        <input className="login__input" onChange={(e) => {setUserEmail(e.target.value);}} />
                     </div>
+                    <p>{emailError}</p>
                     <div>
                         <label>Hasło</label>
-                        <input onChange={(e) => {setUserPassword(e.target.value);}} type="password" />
-                        <p>s{passwordError}</p>
+                        <input className="login__input" onChange={(e) => {setUserPassword(e.target.value);}} type="password" />
                     </div>
+                    <p>{passwordError}</p>
                 </div>
-                <div>
+                <div className="login__buttons">
                     <RouterPath to="/Register">
                         <button>Załóż konto</button>
                     </RouterPath>
