@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {Link} from 'react-scroll'
 import {Link as RouterPath} from "react-router-dom";
+import {fire} from "../../../../config";
 
+function Nav(props) {
 
-function Nav() {
+    const {user} = props;
+
+    const currentUser = useState(fire.auth().currentUser.email);
 
     return (
         <section>
             <nav className="header__nav">
                 <ul className="header__login">
+                    <div>{currentUser}</div>
                     <RouterPath to="/Login">
                         <button className="routing">Zaloguj</button>
                     </RouterPath>
@@ -18,7 +23,7 @@ function Nav() {
                 </ul>
                 <ul className="header__menu">
                     <button>
-                        <Link activeClass="active"
+                        {/* <Link activeClass="active"
                             to="header"
                             spy={true}
                             smooth={true}
@@ -27,7 +32,10 @@ function Nav() {
                             duration={300}
                             delay={200}>
                             Start
-                            </Link>
+                            </Link> */}
+                    <RouterPath to="/Home">
+                        Start
+                    </RouterPath>
                     </button>
                     <button>
                         <Link activeClass="active"
@@ -59,7 +67,7 @@ function Nav() {
                             spy={true}
                             smooth={true}
                             hashSpy={true}
-                            offset={-70}
+                            offset={-68}
                             duration={500}
                             delay={200}>
                             Fundacja i organizacje

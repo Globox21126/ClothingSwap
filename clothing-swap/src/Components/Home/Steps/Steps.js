@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link as RouterPath} from "react-router-dom";
 
 function Steps() {
     return (
@@ -35,7 +36,12 @@ function Steps() {
             </section>
             <section className="steps__outro">
                 <div>
-                    <h1>Oddaj<span>rzeczy</span></h1>
+                    <RouterPath to="/Login">
+                        <button>
+                            <span>Oddaj</span>
+                            <span>rzeczy</span>
+                        </button>
+                    </RouterPath>
                 </div>
             </section>
         </>

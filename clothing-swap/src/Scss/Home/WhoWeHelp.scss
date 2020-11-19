@@ -38,6 +38,12 @@
             font-family: $font__OpenSans;
             color: $color__dark__gray;
 
+            &:hover {
+                background-color: $color__white;
+                border: 1px solid $color__light__gray;
+                transition: 0.8s;
+            }
+
 
             &:focus {
                 border: 1px solid $color__light__gray;

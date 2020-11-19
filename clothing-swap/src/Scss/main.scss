@@ -22,3 +22,17 @@
     height: 33px;
     width: 253px;
 }
+
+a {
+    text-decoration: none;
+
+    &:active {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &:focus {
+        text-decoration: none;
+        color: inherit;
+    }
+}
