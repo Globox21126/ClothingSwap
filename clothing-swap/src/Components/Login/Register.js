@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Nav from "../Home/Header/Header__components/Nav";
 import {Link as RouterPath} from "react-router-dom";
-import fire from "../../config";
+import {fire} from "../../config";
 
 
 function Register() {

@@ -12,6 +12,24 @@
         font-family: $font__OpenSans;
         margin-right: 140px;
 
+        .icons {
+            align-self: flex-end;
+            display: flex;
+            flex-direction: row;
+
+            a {
+                margin: 15px 15px;
+            }
+        }
+
+        // .form__container {
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     align-self: center;
+        //     text-align: ;
+        // }
+
         h1 {
             margin: 0 auto;
             margin-bottom: 38px;
@@ -113,6 +131,7 @@
                 scale: 0.8;
             }
         }
+
     }
 
     .form__background {
@@ -138,7 +157,10 @@
 
         h3 {
             position: relative;
-            color: black;
+            color: $color__dark__gray;
+            font-size: 18px;
+            margin-bottom: 20px;
+            margin-right: 150px;
         }
     }
 }

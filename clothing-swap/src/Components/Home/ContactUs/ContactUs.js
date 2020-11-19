@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import database from "../../../config";
+import {database} from "../../../config";
+
 
 function ContactUs() {
 
@@ -38,32 +39,40 @@ function ContactUs() {
             userMessage: message,
         }
 
+        console.log(database)
         // addMessage(formMessage);
         database.ref("/messages").push(formMessage);
 
         changeName("");
         changeEmail("");
         changeMessage("");
+        
     }
 
     return (
         <section id="contact" className="contact__us__form">
             <form onSubmit={handleForm} className="form wrapper">
-                <h1>Skontaktuj się z nami</h1>
-                <div className="decoration"></div>
-                <div className="form__inputs">
-                    <div>
-                        <label>Wpisz swoje imię</label>
-                        <input onChange={setName} value={name} placeholder="Krzysztof" />
-                    </div>
-                    <div>
-                        <label>Wpisz swój email</label>
-                        <input onChange={setEmail} value={email} placeholder="abc@xyz.pl" />
-                    </div>
+                {/* <div className="form__container"> */}
+                    <h1>Skontaktuj się z nami</h1>
+                    <div className="decoration"></div>
+                    <div className="form__inputs">
+                        <div>
+                            <label>Wpisz swoje imię</label>
+                            <input onChange={setName} value={name} placeholder="Krzysztof" />
+                        </div>
+                        <div>
+                            <label>Wpisz swój email</label>
+                            <input onChange={setEmail} value={email} placeholder="abc@xyz.pl" />
+                        </div>
+                     </div>
+                    <label className="form__message">Wpisz swoją wiadomość</label>
+                    <input onChange={setMessage} value={message} className="form__message__input" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+                    <button>Wyślij</button>
+                {/* </div> */}
+                <div className="icons">
+                    <div>FB</div>
+                    <div>IG</div>
                 </div>
-                <label className="form__message">Wpisz swoją wiadomość</label>
-                <input onChange={setMessage} value={message} className="form__message__input" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-                <button>Wyślij</button>
             </form>
             <div className="form__background">
                 <h3>Copyright by Coders Lab</h3>

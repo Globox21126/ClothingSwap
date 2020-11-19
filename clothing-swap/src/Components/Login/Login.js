@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Nav from "../Home/Header/Header__components/Nav";
 import {Link as RouterPath} from "react-router-dom";
-import fire from "../../config";
+import {fire} from "../../config";
 
 
 function Login() {
@@ -11,6 +11,9 @@ function Login() {
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("");
     const [hasAccount, setHasAccount] = useState(false);
+
+    const [currentUser, setCurrentUser] = useState("");
+
 
     const clearErrors = () => {
         setEmailError("");
@@ -23,7 +26,9 @@ function Login() {
         fire 
         .auth()
         .signInWithEmailAndPassword(userEmail, userPassword)
+        .then(authListener())
         .catch((error) => {
+            console.log(error)
             switch (error.code) {
                 case "auth/invalid-email":
                 case "auth/user-disabled":
@@ -34,14 +39,15 @@ function Login() {
                     setPasswordError(error.message);
                     break;
             }
-        });
-        console.log(userEmail) 
+        })
+
     };
 
     const authListener = () => {
-        fire.auth().onAuthStateChanged((user) => {
-            if(user) {
-                setHasAccount(user);
+        fire.auth().onAuthStateChanged((userE) => {
+            if(userE) {
+                setCurrentUser(fire.auth().currentUser.email);
+                console.log(fire.auth().currentUser.email);
             } else {
                 setHasAccount(false);
             }
@@ -56,7 +62,7 @@ function Login() {
 
     return (
         <section className="header wrapper login">
-            <Nav user={hasAccount} />
+            <Nav user={currentUser} />
             <section className="login__form">
                 <h1>Zaloguj się</h1>
                 <div className="decoration form__deco"></div>
