@@ -7,13 +7,13 @@ function Nav(props) {
 
     const {user} = props;
 
-    const currentUser = useState(fire.auth().currentUser.email);
+    // const currentUser = useState(fire.auth().currentUser.email);
 
     return (
         <section>
             <nav className="header__nav">
                 <ul className="header__login">
-                    <div>{currentUser}</div>
+                    {/* <div>{currentUser}</div> */}
                     <RouterPath to="/Login">
                         <button className="routing">Zaloguj</button>
                     </RouterPath>
